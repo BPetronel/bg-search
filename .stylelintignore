@@ -1,0 +1,4 @@
+primereact/**
+build/**
+reset.scss
+node_modules/**
