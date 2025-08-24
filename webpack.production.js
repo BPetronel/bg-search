@@ -9,7 +9,7 @@ module.exports = {
 	mode: 'production',
 	entry: ['./index.js'],
 	output: {
-		path: path.resolve(__dirname, './build'),
+		path: path.resolve(__dirname, './docs'),
 		filename: 'js/[name].[contenthash].js'
 	},
 	devtool: 'source-map',

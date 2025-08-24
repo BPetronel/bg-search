@@ -10,7 +10,7 @@ module.exports = {
 	mode: 'development',
 	entry: ['./index.js'],
 	output: {
-		path: path.resolve(__dirname, './build'),
+		path: path.resolve(__dirname, './docs'),
 		filename: 'js/[name].[contenthash].js'
 	},
 	devtool: 'eval-cheap-module-source-map',
@@ -53,7 +53,7 @@ module.exports = {
 	devServer: {
 		open: true,
 		compress: true,
-		static: [path.resolve(__dirname, './build')],
+		static: [path.resolve(__dirname, './docs')],
 		port: 8080
 	},
 	plugins: [

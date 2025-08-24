@@ -23,9 +23,14 @@ function App() {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [urls, setUrls] = useState<string[]>([]);
 
-	const handleSearch = () => {
-		setUrls(getUrls(searchTerm));
+	const handleSearch = () => setUrls(getUrls(searchTerm));
+
+	const handleReset = () => {
+		setSearchTerm('');
+		setUrls([]);
 	};
+
+	const handleOpenAll = () => urls.forEach(url => window.open(url, '_blank'));
 
 	return (
 		<>
@@ -38,6 +43,14 @@ function App() {
 				<Button variant="contained" onClick={handleSearch}>
 					Search
 				</Button>
+				<Button variant="contained" onClick={handleReset}>
+					Reset
+				</Button>
+				{urls.length > 0 && (
+					<Button variant="contained" onClick={handleOpenAll}>
+						Open All
+					</Button>
+				)}
 			</Box>
 			<Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 2}}>
 				{urls.map(url => {
