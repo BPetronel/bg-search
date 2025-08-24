@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import {useState} from 'react';
 import Box from '@mui/material/Box';
 
-const regex = /www\.(.*?)\.ro/;
+const regex = /w{0,3}\.(.*?)\.ro/;
 
 const getUrls = searchTerm => [
 	`https://www.skroutz.ro/search?keyphrase=${searchTerm}`,
@@ -11,7 +11,7 @@ const getUrls = searchTerm => [
 	`https://www.dragongames.ro/produse?c=${searchTerm}`,
 	`https://www.redgoblin.ro/search?q=${searchTerm}`,
 	`https://www.barlogulcujocuri.ro/produse?c=${searchTerm}`,
-	`https://www.shop.guildhall.ro/produse?c=${searchTerm}`,
+	`https://shop.guildhall.ro/produse?c=${searchTerm}`,
 	`https://www.jocozaur.ro/search?options%5Bprefix%5D=last&type=product%2Carticle%2Cpage&q=${searchTerm}`,
 	`https://www.pionul.ro/index.php?route=product/search&search=${searchTerm}&description=true`,
 	`https://www.lexshop.ro/produse?c=${searchTerm}`,
