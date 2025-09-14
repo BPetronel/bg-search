@@ -23,7 +23,10 @@ function App() {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [urls, setUrls] = useState<string[]>([]);
 
-	const handleSearch = () => setUrls(getUrls(searchTerm));
+	const handleSearch = () => {
+		setUrls([]);
+		setUrls(getUrls(searchTerm));
+	};
 
 	const handleReset = () => {
 		setSearchTerm('');
@@ -38,7 +41,10 @@ function App() {
 				<TextField
 					variant="outlined"
 					value={searchTerm}
-					onChange={(event: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(event.target.value)}
+					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+						setUrls([]);
+						setSearchTerm(event.target.value);
+					}}
 				/>
 				<Button variant="contained" onClick={handleSearch}>
 					Search
