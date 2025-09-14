@@ -62,7 +62,7 @@ function App() {
 				{urls.map(url => {
 					const site = url.match(regex)?.[1] as string;
 					return (
-						<Button key={url} variant="contained" onClick={() => window.open(url, '_blank')}>
+						<Button key={site} variant="contained" onClick={() => window.open(url, '_blank')}>
 							{site}
 						</Button>
 					);
