@@ -24,8 +24,10 @@ function App() {
 	const [urls, setUrls] = useState<string[]>([]);
 
 	const handleSearch = () => {
-		setUrls([]);
-		setUrls(getUrls(searchTerm));
+		if (!searchTerm.trim()) {
+			setUrls([]);
+			setUrls(getUrls(searchTerm));
+		}
 	};
 
 	const handleReset = () => {
