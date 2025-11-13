@@ -22,7 +22,7 @@ function App() {
 	const [urls, setUrls] = useState<string[]>([]);
 
 	const handleSearch = () => {
-		if (!searchTerm.trim()) {
+		if (searchTerm.trim()) {
 			setUrls([]);
 			setUrls(getUrls(searchTerm));
 		}
