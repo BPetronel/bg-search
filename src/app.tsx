@@ -12,7 +12,7 @@ const getUrls = searchTerm => [
 	`https://www.redgoblin.ro/search?q=${searchTerm}`,
 	`https://www.barlogulcujocuri.ro/produse?c=${searchTerm}`,
 	`https://shop.guildhall.ro/produse?c=${searchTerm}`,
-	`https://www.pionul.ro/index.php?route=product/search&search=${searchTerm}&description=true`,
+	`https://www.pionul.ro/catalog/q/${searchTerm}`,
 	`https://www.lexshop.ro/produse?c=${searchTerm}`,
 	`https://www.regatuljocurilor.ro/ro/cautare?controller=search&orderby=position&orderway=desc&search_query=${searchTerm}&submit_search=`
 ];
